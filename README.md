@@ -15,6 +15,16 @@ Run using Leiningen
 
     lein run
 
+## Example
+
+    $ lein run
+    Keep same door
+    10000 trials: won 3359, lost 6641 (0.3359)
+    Change door
+    10000 trials: won 6628, lost 3372 (0.6628)
+    Random door
+    10000 trials: won 4986, lost 5014 (0.4986)
+
 ## License
 
 Copyright © 2018 Corey Beres
