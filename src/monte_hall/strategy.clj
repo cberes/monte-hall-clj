@@ -19,6 +19,16 @@
       (remove #(= goat-door %))
       (first))))
 
+(deftype RandomDoorStrategy []
+  Strategy
+  (choose-initial-door [this] (random-door))
+  (choose-final-door [this initial-door goat-door]
+    (->> (door-range)
+      (remove #(= goat-door %))
+      (rand-nth))))
+
 (def retain-door (RetainDoorStrategy.))
 
 (def change-door (ChangeDoorStrategy.))
+
+(def pick-door (RandomDoorStrategy.))
